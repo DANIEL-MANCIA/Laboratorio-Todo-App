@@ -44,6 +44,19 @@ services:
     networks:
       - todo-network
 
+  # Frontend
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - todo-network
+
 # Volúmenes para persistencia
 volumes:
   postgres_data:
