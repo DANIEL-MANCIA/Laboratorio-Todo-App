@@ -1,23 +1,18 @@
-# Imagen base optimizada
+# Imagen base de Node.js
 FROM node:18-alpine
 
-# Establecer directorio de trabajo
+# Directorio de trabajo
 WORKDIR /app
 
-# Copiar archivos de dependencias
+# Copiar package.json e instalar dependencias
 COPY package*.json ./
+RUN npm install --production
 
-# Instalar dependencias
-RUN npm install --only=production
-
-# Copiar código fuente (incluyendo la nueva estructura de carpetas)
+# Copiar SOLO el directorio src (que contiene toda la estructura)
 COPY src/ ./src/
 
 # Exponer puerto
 EXPOSE 3000
 
-# Variable de entorno para modo producción
-ENV NODE_ENV=production
-
-# Comando de inicio
-CMD ["node", "src/index.js"]
+# Comando para iniciar la aplicación
+CMD ["npm", "start"]
