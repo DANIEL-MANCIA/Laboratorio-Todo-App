@@ -75,6 +75,12 @@ Cliente → Nginx (Puerto 8080) → Backend Node.js (Puerto 3000) → PostgreSQL
 **Ver estado de servicios**
 - docker-compose ps
 
+**Ver Vomumen**
+- docker volume inspect todo-app_postgres_data
+
+**Ver tabla de postgres con los datos**
+- docker-compose exec db psql -U todo_user -d todoapp -c "SELECT * FROM tasks;"
+
 **Ejecutar comando en contenedor**
 - docker-compose exec backend sh
 - docker-compose exec db psql -U todo_user -d todoapp
