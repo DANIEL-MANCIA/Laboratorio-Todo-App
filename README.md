@@ -196,7 +196,7 @@ created_at | TIMESTAMP   | DEFAULT NOW()
 ## 👥 Autores
 Estudiante 1: [Daniel Mancia](https://github.com/DANIEL-MANCIA) - Backend
 
-Estudiante 2: [Fernando Gonzalez](https://github.com/FernandoG23) - Frontend
+Estudiante 2: [Fernando Gonzalez](https://github.com/JosueFer23) - Frontend
 
 ## 📅 Fecha de Entrega
 
