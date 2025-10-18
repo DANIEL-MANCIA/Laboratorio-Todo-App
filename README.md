@@ -113,6 +113,7 @@ todo-app/
 |       ├── utlis
 |       └── app.js
 └── docs/
+    ├── img
     └── arquitectura.md
 
 ## 🔌 API Endpoints
